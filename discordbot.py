@@ -1,9 +1,10 @@
 #coding:UTF-8
 import discord
+import os
 from discord.ext import tasks
 from datetime import datetime 
 
-TOKEN = "ODE5NzM5MjkzOTY1ODc3MjU4.YEq_tQ.pNX1Se3pgyewMZ472Wx8syFFsxs" #トークン
+TOKEN = os.environ['DISCORD_BOT_TOKEN']
 CHANNEL_ID = 793419776591396864 #チャンネルID
 
 GLOBAL_LIST = []
@@ -128,8 +129,8 @@ async def loop():
     now = datetime.now().strftime('%H:%M')
     # 現在の曜日
     week = datetime.now().strftime('%A')
-    if week == 'Friday':
-        if now == '15:30':	
+    if week == 'Saturday':
+        if now == '19:01':	
             global GLOBAL_START_FLG
             GLOBAL_START_FLG = False
             global GLOBAL_LIST

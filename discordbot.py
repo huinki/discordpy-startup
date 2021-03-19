@@ -129,8 +129,8 @@ async def loop():
     now = datetime.now().strftime('%H:%M')
     # 現在の曜日
     week = datetime.now().strftime('%A')
-    if week == 'Saturday':
-        if now == '19:01':	
+    if week == 'Fryday':
+        if now == '12:00':	
             global GLOBAL_START_FLG
             GLOBAL_START_FLG = False
             global GLOBAL_LIST
